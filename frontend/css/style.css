@@ -1,0 +1,69 @@
+:root {
+  --ink-navy: #08142a;
+  --clinical-blue: #123a5c;
+  --mint: #5edeb2;
+  --amber: #e8a13d;
+  --text: #eaf0f6;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--ink-navy);
+  color: var(--text);
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+header {
+  background: var(--clinical-blue);
+  padding: 16px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--mint);
+}
+header h1 { font-size: 18px; margin: 0; }
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-right: 18px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+nav a:hover { color: var(--mint); opacity: 1; }
+main { padding: 28px; max-width: 1000px; margin: 0 auto; }
+.card {
+  background: var(--clinical-blue);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #1c4a70;
+}
+input, select {
+  padding: 9px; border-radius: 6px; border: 1px solid var(--mint);
+  background: #0d2540; color: var(--text); margin-bottom: 10px; width: 100%;
+}
+button {
+  background: var(--mint); color: #052318; border: none; padding: 9px 16px;
+  border-radius: 6px; font-weight: 700; cursor: pointer;
+}
+button.secondary { background: var(--amber); color: #2b1a00; }
+button:hover { opacity: 0.9; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #1c4a70; font-size: 14px; }
+th { color: var(--mint); }
+.error { color: #ff9090; }
+.login-wrap { max-width: 360px; margin: 90px auto; }
+
+/* Tooth chart */
+.tooth-chart { display: flex; flex-direction: column; gap: 6px; align-items: center; }
+.tooth-row { display: flex; gap: 6px; }
+.tooth {
+  width: 34px; height: 34px; border-radius: 6px; border: 1px solid var(--mint);
+  display: flex; align-items: center; justify-content: center; font-size: 11px;
+  cursor: pointer; background: #0d2540;
+}
+.tooth.healthy { background: #0d2540; }
+.tooth.cavity { background: #7a3b1f; border-color: var(--amber); }
+.tooth.filled { background: #2c6b52; }
+.tooth.missing { background: #333; opacity: 0.5; text-decoration: line-through; }
+.tooth.crown { background: #6b5b2c; border-color: gold; }
+.tooth:hover { outline: 2px solid var(--mint); }
